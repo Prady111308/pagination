@@ -55,7 +55,9 @@ const Products2 = () => {
 
   useEffect (()=>{
     window.addEventListener('scroll',handleScrollEvent)
-    // handleScrollEvent();
+    return () => {
+      window.removeEventListener("scroll", handleScrollEvent);
+    };
   },[])
 
   
